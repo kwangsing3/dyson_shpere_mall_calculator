@@ -8,6 +8,7 @@ export interface Unit {
 export abstract class Building implements Unit {
     public name = this.constructor.name; //建築物名稱
     public amount = 1;
+    public calulateSKIP = false; //有些建物要依序升級會依在旁邊，所以不需要計算比重
     constructor(amount?: number) {
         this.amount = amount ? Math.abs(amount) : 1
     }
