@@ -2,6 +2,7 @@ import { Building, Unit } from "../interface"
 import { 晶格硅, 石墨烯, 石材, 磁線圈, 處理器, 超級磁場環, 鋼材, 鐵錠, 電漿激發器, 電磁渦輪, 電路板, 齒輪 } from "../material/產物.cls"
 
 export class 電力感應塔 extends Building {
+    public calulateSKIP: boolean = true
     public recipe: Unit[] = [
         new 鐵錠(2), new 磁線圈(1)
     ]

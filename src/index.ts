@@ -1,4 +1,5 @@
 import { 傳送帶MKI, 傳送帶MKII, 傳送帶MKIII, 原油精煉廠, 無線輸電塔, 蓄电器, 電磁軌道彈射器 } from "./building/建築物.class";
+import persentFunc from "./ext/persent.func";
 import { Building, Unit } from "./interface";
 
 
@@ -102,14 +103,16 @@ function AnalyzeEle(data: { [key: string]: number }) {
     for (const index in analys) {
         const key = analys[index];
         let toal = 0;
-        st += `-第${r++}圈-\n`
         let d = ''
         key.forEach(element => {
-            d += `    ${element.name}:${element.amount} \n`;
-            toal += element.amount
             mx = Math.max(mx, element.amount)
+            toal += element.amount
         });
-        st += d + `         同時間貨物數量 ${toal} \n\n`
+        key.forEach(element => {
+            d += `${persentFunc(element.amount, toal)}      ${element.name}:${element.amount}  \n`;
+        });
+        st += `-第${r++}圈- 貨物總共 ${toal} \n`
+        st += d + `\n`
     }
     //
     //報告
