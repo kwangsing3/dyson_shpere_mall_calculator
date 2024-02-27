@@ -8,8 +8,10 @@ export class 硅原料 extends Material { }
 export class 煤原料 extends Material { }
 export class 鈦原料 extends Material { }
 export class 可燃冰 extends Material { }
-export class 重氫 extends Material { } //因不會進入到混帶環故當作原料產物
+export class 重氫 extends Material { } //因不會進入到混帶上製作故當作原料產物
+export class 氫 extends Material { }
 export class 分形硅石 extends Material { }
+export class 反物質 extends Material { }
 
 //*****一級產物*****
 export class 鐵錠 extends Material {
