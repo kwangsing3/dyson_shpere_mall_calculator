@@ -12,6 +12,9 @@ export class 重氫 extends Material { } //因不會進入到混帶上製作故�
 export class 氫 extends Material { }
 export class 分形硅石 extends Material { }
 export class 反物質 extends Material { }
+export class 光柵石 extends Material { }
+export class 單極磁石 extends Material { }
+
 
 //*****一級產物*****
 export class 鐵錠 extends Material {
@@ -74,6 +77,7 @@ export class 晶格硅 extends Material {
         new 分形硅石(0.5)
     ]
 }
+export class 金剛石 extends Material { }
 
 
 //*****二級產物*****
@@ -103,11 +107,18 @@ export class 微晶元件 extends Material {
     ]
 }
 export class 電漿激發器 extends Material { }
+export class 鈦合金 extends Material {
+    public ignore = true;
+}
+export class 動力引擎 extends Material { }
+
 export class 電動機 extends Material {
     public recipe = [
         new 鐵錠(2), new 齒輪(1), new 磁線圈(1)
     ]
 }
+export class 框架材料 extends Material { }
+
 //*****三級產物*****
 
 export class 電磁渦輪 extends Material {
@@ -126,4 +137,17 @@ export class 處理器 extends Material {
     ]
 }
 
-
+export class 光子合併器 extends Material {
+    public recipe = [
+        new 電路板(1), new 光柵石(1)
+    ]
+}
+export class 量子芯片 extends Material { }
+export class 湮滅約束球 extends Material { }
+export class 粒子容器 extends Material { }
+export class 加力推進器 extends Material { }
+export class 位面過濾器 extends Material { }
+export class 粒子寬帶 extends Material { }
+export class 引力透鏡 extends Material { }
+export class 鈦化玻璃 extends Material { }
+export class 奇異物質 extends Material { }

@@ -37,4 +37,5 @@ export abstract class Material implements Unit {
         })
         return res
     }
+    public ignore = false //有些配方單個需求量太高，會導致計算的比重失衡，例如只有2項製作配方需要用到，但是用量非常高，就會計算出獨佔一條軌道的問題
 }
